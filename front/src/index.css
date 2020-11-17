@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h4 {
+  margin-top: 5px;
+}
+
+nav.header {
+  height: 40px;
+  display: flex;
+  background: #282c34;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
+nav.header .nav-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  border: none;
+  margin: 0 10px;
+}
+nav.header .nav-btn:hover {
+  text-decoration: underline;
+}
+
+div.main-content {
+  padding: 5px 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  padding: 5px 0;
+  min-height: 40px;
+  box-sizing: border-box;
+  list-style: none;
+  transition: background-color 100ms ease-in-out;
+}
+ul li:nth-child(2n) {
+  background-color: #d0d9e4;
+}
+ul li:hover {
+  background-color: #b7cce6;
+}
+
+.main-content button {
+  background: #38599b;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.main-content button:disabled {
+  background-color: rgb(78, 78, 78);
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+.main-content button[type="submit"] {
+  margin-top: 15px;
+}
+
+.main-content input {
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+  border: 1px solid #b6b6b6;
+}
+.main-content textarea {
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+  border: 1px solid #b6b6b6;
+}
+
+.main-content button.selected {
+  background-color: rgb(81, 118, 192);
+}
+.main-content button.not-selected {
+  background-color: #282c34;
+}
+.main-content button.selected:hover, .main-content button.not-selected:hover{
+  background-color: #5c92ff;
+}
+
+span.review-status {
+  font-size: 10px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+button.review-see-more {
+  margin-top: 15px;
+}
+
+label.nav-mobile, input.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav-items {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background: #1d2129;
+    width: 100vw;
+    height: calc(100vh - 40px);
+    transform: translateX(100%);
+    transition: transform 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-items div {
+    height: 20px;
+    padding: 15px 5px;
+  }
+  label.nav-mobile {
+    display: inline-block;
+  }
+
+  input.nav-mobile:checked ~ .nav-items {
+    transform: translateX(0);
+  }
+}

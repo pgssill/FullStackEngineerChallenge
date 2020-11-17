@@ -1,38 +1,43 @@
 # Full Stack Developer Challenge
-This is an interview challengs. Please feel free to fork. Pull Requests will be ignored.
 
-## Requirements
-Design a web application that allows employees to submit feedback toward each other's performance review.
+## Running the project:
 
-*Partial solutions are acceptable.*  It is not necessary to submit a complete solution that implements every requirement.
+1. Clone the project
+2. Have a MySQL/MariaDB database running on 3306 (can be changed in *ormconfig.json*, along with username/password for the DB connection)
+3. Create a database named `paypay_test` (```CREATE DATABASE `paypaytest`;```)
+4. Run `npm i` on both the `api` and `front` project folders
+5. Run `npm run watch` in the `api` folder. The DB schema should be synced automatically.
+6. Run `npm start` in the `front` folder
+
+## Features:
+
+### API
+* TypeORM and routing-controllers keep the API relatively sane
+* Given the limited requirements, application has a small footprint overall
+
+### Front-end
+* React, Typescript
+* Minimal dependencies
 
 ### Admin view
-* Add/remove/update/view employees
-* Add/update/view performance reviews
+* Add/~~remove~~/~~update~~/view employees
+* Add/update/~~view~~ performance reviews
 * Assign employees to participate in another employee's performance review
 
-### Employee view
-* List of performance reviews requiring feedback
+### ~~Employee view~~
+* ~~List of performance reviews requiring feedback~~
 * Submit feedback
 
-## Challenge Scope
-* High level description of design and technologies used
-* Server side API (using a programming language and/or framework of your choice)
-  * Implementation of at least 3 API calls
-  * Most full stack web developers at PayPay currently use Java, Ruby on Rails, or Node.js on the server(with MySQL for the database), but feel free to use other tech if you prefer
-* Web app
-  * Implementation of 2-5 web pages using a modern web framework (e.g. React or Angular) that talks to server side
-    * This should integrate with your API, but it's fine to use static responses for some of it 
-* Document all assumptions made
-* Complete solutions aren't required, but what you do submit needs to run.
+### Others
+* Responsive, CSS-only mobile nav
 
-## How to complete this challenge
-* Fork this repo in github
-* Complete the design and code as defined to the best of your abilities
-* Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the PayPay interview team
-* Complete your work in your own github repo and send the results to us and/or present them during your interview
-
-## What are we looking for? What does this prove?
-* Assumptions you make given limited requirements
-* Technology and design choices
-* Identify areas of your strengths
+## Shortcomings:
+Due to time constraints, I didn't manage to implement everything I was planning on. Those include:
+* Authentication
+* Permissions based on roles (so that admins have full access and regular users can only see reviews assigned to them)
+* A few of the features (removing/updating employees; the employee view as mentioned above)
+* Lacking an aesthetically pleasing presentation (implementing designs is easy; coming up with a good looking application certainly isn't 😅). The application looks very barebones. I'd was like to add some FontAwesome icons and have some CSS animations to liven it up.
+* Adding `react-router` - went with a much simpler state-based solution to save some time
+* Componentization and reusability could be much improved. Lots of stuff is repeated everywhere
+* Tests
+* Used `create-react-app` for the front-end. I'm not a big fan (it has a *lot* of stuff packed in that might not be necessary for the project) but it saved a lot of time.
