@@ -1,5 +1,8 @@
 # Full Stack Developer Challenge
 
+![](https://i.imgur.com/GPTsAFE.png)
+![](https://i.imgur.com/m4Dhw4b.png)
+
 ## Running the project:
 
 1. Clone the project
