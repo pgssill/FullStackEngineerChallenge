@@ -15,12 +15,12 @@
 ## Features:
 
 ### API
-* TypeORM and routing-controllers keep the API relatively sane
-* Given the limited requirements, application has a small footprint overall
+* TypeORM and routing-controllers keep the API relatively sane. TypeORM models help with typing API responses and routing-controllers helps in structuring the API declaratively.
+* Given the limited requirements and tools used, the application has a small footprint, overall.
 
 ### Front-end
-* React, Typescript
-* Minimal dependencies
+* React, Typescript. Typescript helps assure that unhandled behaviors are uncommon if not impossible and speeds up development with stronger typing.
+* Minimal added dependencies.
 
 ### Admin view
 * Add/~~remove~~/~~update~~/view employees
