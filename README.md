@@ -4,7 +4,7 @@
 
 1. Clone the project
 2. Have a MySQL/MariaDB database running on 3306 (can be changed in *ormconfig.json*, along with username/password for the DB connection)
-3. Create a database named `paypay_test` (```CREATE DATABASE `paypaytest`;```)
+3. Create a database named `paypay_test` (```CREATE DATABASE `paypay_test`;```)
 4. Run `npm i` on both the `api` and `front` project folders
 5. Run `npm run watch` in the `api` folder. The DB schema should be synced automatically.
 6. Run `npm start` in the `front` folder
